@@ -1,5 +1,4 @@
 .container {
-/*    margin: auto; */
     font-family: "Century Gothic";
     /*background-color: rgb(69, 101, 175);*/
     text-align: center;
@@ -19,6 +18,7 @@
 
 .nav-link-item {
     padding-right: 2rem;
+    padding-top: 1rem;
 }
 
 .nav-link-text {
@@ -36,6 +36,11 @@
 /*    margin: 3rem 0;?*/
 }
 
+.small-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+/*    margin: 3rem 0; */
+}
 .paragraph {
     font-size: 1.5rem;
     font-weight: 400;

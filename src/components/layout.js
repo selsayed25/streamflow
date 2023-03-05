@@ -8,6 +8,7 @@ import {
     navLinkText,
     siteTitle,
     paragraph,
+    smallHeading,
 } from "./layout.module.css"
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -24,19 +25,15 @@ const Layout = ({ pageTitle, children }) => {
 
     return (
         <div className={container}>
+            
             <center>
                 <nav>
                     <ul className={navLinks}>
-
+                        <li className={navLinkItem}>
+                            <StaticImage src="../images/streamflowwhitelogo.png" alt="logo" height={70} />
+                        </li>
                         <li className={navLinkItem}>
                             <header className={siteTitle}>{data.site.siteMetadata.title}</header>
-                        </li>
-
-
-                        <li>
-                            <h1 style={{ color: "white" }}>
-                                hello
-                            </h1>
                         </li>
                         <li className={navLinkItem}>
                             <Link to="/" className={navLinkText}>
@@ -55,6 +52,7 @@ const Layout = ({ pageTitle, children }) => {
                         </li>
                     </ul>
                 </nav>
+                <hr />
             </center>
             <main>
                 <h1 className={heading}>{pageTitle}</h1>

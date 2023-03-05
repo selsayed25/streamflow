@@ -11,6 +11,16 @@ work_Dir: str = "%s/working" % (main_Path)
 data_Dir: str = "%s/data" % (main_Path)
 
 
+def process_Stations_List(state: str, data_type_list: dict):
+    with open("%s/%s.json" % (data_Dir, state), "r") as read_File:
+        data: dict = json.load(read_File)
+        for station in data:
+            for data_type in station["DATA"]:
+                if data_type in data_type_list:
+                    station["SHOW"] = True
+                else:
+                    station["SHOW"] = False
+
 def get_State_Stations_List(state: str):
     print("Getting station list for state: %s" % (state))
     print("----------------------------------")
@@ -43,12 +53,12 @@ def get_State_Stations_List(state: str):
                                                         "DATA_UNIT": station["variable"]["unit"]["unitCode"],
                                                         "DATA_DESCRIPTION": station["variable"]["variableDescription"]}})
             station_Dict[station_Name] = {
-                "LATITUDE": station_Latitude, "LONGITUDE": station_Longitude, "DATA": station_Data}
+                "LATITUDE": station_Latitude, "LONGITUDE": station_Longitude, "DATA": station_Data, "SHOW": False}
 
-    with open("%s/%s.json" % (work_Dir, state), "w") as save_File:
+    with open("%s/%s.json" % (data_Dir, state), "w") as save_File:
         json.dump(station_Dict, save_File)
 
-    print("Stations saved to file: %s/%s.txt" % (work_Dir, state))
+    print("Stations saved to file: %s/%s.txt" % (data_Dir, state))
     print("----------------------------------")
 
 
