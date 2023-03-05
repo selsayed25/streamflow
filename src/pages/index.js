@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home" children = "This is the home page">
-
+        <b/>
     </Layout>
   )
 }

@@ -9,10 +9,10 @@ const DataMap = () => {
     return (
         <Layout>
             <table>
-                <tr backgroundColor="whitesmoke" valign='top'>
-                    <td align="justified" bgcolor="selago">
+                <tr valign='top'>
+                    <td align="justified">
                         <span align="left">
-                            <form>
+                            <form action = "https://selsayed25-didactic-rotary-phone-qgxpq4qqpxjc4pg-8000.preview.app.github.dev/data-map/">
                                 <label style={{ padding: "10px" }}>
                                     Which state?
                                     <br />
@@ -71,17 +71,17 @@ const DataMap = () => {
                                         <option value="wyoming">Wyoming</option>
                                     </select>
                                 </label>
+                                {/* <br />
+                                <input type="checkbox" name="Discharge" value="on" /> Discharge
                                 <br />
-                                <input type="checkbox" name="Discharge" value="off" /> Discharge
+                                <input type="checkbox" name="Turbidity" value="on" /> Turbidity
                                 <br />
-                                <input type="checkbox" name="Turbidity" value="off" /> Turbidity
+                                <input type="checkbox" name="Temperature" value="on" /> Temperature
                                 <br />
-                                <input type="checkbox" name="Temperature" value="off" /> Temperature
+                                <input type="checkbox" name="pH" value="on" /> pH
                                 <br />
-                                <input type="checkbox" name="pH" value="off" /> pH
-                                <br />
-                                <input type="checkbox" name="Chemical Oxygen Demand" value="off" /> Chemical Oxygen Demand
-                                <br />
+                                <input type="checkbox" name="Chemical Oxygen Demand" value="on" /> Chemical Oxygen Demand
+                                <br /> */}
                                 <input type="submit" name="submit" value="Submit" style={{ fontFamily: "Century Gothic", padding: "10px", marginLeft: "10px", marginTop: "5px", marginRight: "60px", marginBottom: "20px", fontSize: "20px" }} />
 
                             </form>
@@ -108,9 +108,6 @@ const DataMap = () => {
         </Layout>
     )
 }
-
-// Write a function that takes the user's choice from the dropdown menu and changes the map to display the state they selected
-
 
 export const Head = () => <Seo title="Data Map" />
 
